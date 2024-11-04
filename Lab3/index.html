@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITMD 441/541 - Lab 3 - Tip Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tip Calculator</h1>
+            <p>ITMD 541 - Lab 3 - Gopal Raj Suresh Dummugudupu</p>
+        </header>
+        
+        <main>
+            <form id="tipCalculator">
+                    <div class="form-group">
+                        <label for="billTotal">Bill Total ($):</label>
+                        <input type="text" id="billTotal" name="billTotal" required placeholder="Enter bill amount">
+                        <span id="billError" class="error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipSlider">Tip:</label>
+                        <input type="range" id="tipSlider" name="tipSlider" min="0" max="100" value="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipPercentage">Tip Percentage:</label>
+                        <input type="text" id="tipPercentage" disabled>
+                    </div>
+
+                    <div class="form-group currency-section">
+                        <label for="currencySelect">Select Currency:</label>
+                        <select id="currencySelect">
+                            <option value="USD">USD ($)</option>
+                            <option value="INR">INR (₹)</option>
+                            <option value="JPY">JPY (¥)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipAmount" id="tipAmountLabel">Tip Amount in USD:</label>
+                        <input type="text" id="tipAmount" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="totalBill" id="totalBillLabel">Total Bill with Tip in USD:</label>
+                        <input type="text" id="totalBill" disabled>
+                    </div>
+
+                <div class="currency-rates">
+                    <h3>Currency Conversion:(1 USD):</h3>
+                    <ul>
+                        <li>$1 USD = ₹84.07 INR for Rupee</li>
+                        <li>$1 USD = ¥149.34 JPY for Yen</li>
+                    </ul>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
